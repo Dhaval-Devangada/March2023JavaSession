@@ -6,7 +6,8 @@ public class StringWithQuotes {
         String str1= "I love Java and its concepts";
         System.out.println(str1);
 
-        String str = "I love \"India\" and its Nature";
+        String str = "I love \"India\" and its Nature"; // we need to do this Because Java uses quotes to define string
+      //  \" is an escape sequence used to include a double quote " inside a string in Java.
 
         System.out.println(str); // I love "Java" and its concepts <== we want this output
         // To do it we need to escape the characters => To do that we need to put "\" to the left of "
@@ -29,6 +30,17 @@ public class StringWithQuotes {
         String xpath = "//a[text()='" + userName + "']"; // By clicking on username we can check that we are referring correct username or not
         System.out.println(xpath);                       // If we are not able to click that means it is not a variable name
 
-
+/**
+ * Part           | What it means
+ * "//a[text()=' | Start of the XPath string in Java — double quotes are for the Java string
+ * + userName + | We're adding the variable value into the XPath
+ * ']" | End of the XPath condition — includes a single quote (for XPath) and ends the Java string with double quote
+ *
+ *
+ *
+ * Component        | Who needs it  | Why
+ * " (double quote) | Java          | To define a string
+ * ' (single quote) | XPath         | To wrap the text you're matching
+ */
     }
 }

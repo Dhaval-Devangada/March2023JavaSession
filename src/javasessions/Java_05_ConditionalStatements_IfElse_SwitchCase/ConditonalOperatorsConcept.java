@@ -118,7 +118,7 @@ public class ConditonalOperatorsConcept {
         } else {
             System.out.println("plz pass the right browser...." + browser);
         }
-        // Above is not the write way to writing the code , below is the right way
+        // Above is not the right way to writing the code , below is the right way
         // Above is the problem and below is the soluation
 
 

@@ -80,7 +80,7 @@ public class IncrementalAndDecrementalOperators {
         //
 
         int test = 5;
-        System.out.println(test++); // 5  // here we don't have second variable, so println will consume the result
+        System.out.println("Value of test++"+ test++); // 5  // here we don't have second variable, so println will consume the result
         // First you give original value to println then the increase the value of test by 1
         System.out.println(test);// current value - 6
 

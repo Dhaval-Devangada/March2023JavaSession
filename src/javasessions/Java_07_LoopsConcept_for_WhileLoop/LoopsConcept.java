@@ -86,15 +86,15 @@ public class LoopsConcept {
 
         System.out.println("---------ugly for loop 1---------");
         //below is also right syntax but look ugly
-        int g = 1;
+        int g = 1; // declared and initialazation
         for (; g <= 10; g++) {
             System.out.println(g);
         }
 
         System.out.println("---------ugly for loop 2---------");
         //below is also right syntax but look ugly
-        int j;
-        for (j = 0; j <= 10; j++) {
+        int j; // declared
+        for (j = 0; j <= 10; j++) { // but initialiazed j here
             System.out.println(j);
         }
         System.out.println("---------ugly for loop 3---------");
@@ -146,8 +146,8 @@ public class LoopsConcept {
 //wait for the element on the page : 0,2,5,10,20 seconds
 //wait for the page loading : 0,2,5,10 seconds in my system it is 10 seconds but in virat's system it is taking 20 seconds due to internet
 //dropdown values: wait until all the values are visible
-//Webtable pagination (we don't know hownmany times we need to click o the next)
-//calander : i want to select march 2032(here we don't have any idea how many times I want to click on the next )
+//Web table pagination (we don't know how many times we need to click on the next)
+//calendar : i want to select march 2032(here we don't have any idea how many times I want to click on the next )
 //carousel
 
 

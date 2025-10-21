@@ -50,10 +50,13 @@ public class ArrayLiteralsConcept {
         //can we store Object  literals? YES
         Object studentInfo[] = {"Vijay", 25, 34.44, 'm', "Pune", "India", false};
 
-        System.out.println(Arrays.toString(d));
+        System.out.println("Using toString method of Arrays"+Arrays.toString(d));
+        System.out.println("Using default toString method of Objects which prints class type + hashcode"+d.toString());
+        System.out.println("prints class type + hashcode"+d);
         System.out.println(Arrays.toString(c));
         System.out.println(Arrays.toString(emp));
         System.out.println(Arrays.toString(studentInfo));
+
 
         //can we iterate the array using foreach loop? Yes
         for (String e : emp) {
@@ -71,3 +74,14 @@ public class ArrayLiteralsConcept {
 
     }
 }
+
+/**
+ * [I@5acf9800
+ *
+ * 😵 That’s not helpful! It's the default output from Java for objects — it’s printing
+ *  the memory address (technically, it's the class type + hashcode), not the contents of the array.
+ *
+ *  In Java, arrays are objects, and System.out.println() calls the array’s toString() method.
+ *  But the default toString() method from Object doesn’t print the contents — just metadata.
+ *  Arrays.toString() is a helper method that knows how to loop through the array and build a nice string for display.
+ */

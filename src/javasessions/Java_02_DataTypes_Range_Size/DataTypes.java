@@ -2,7 +2,6 @@ package javasessions.Java_02_DataTypes_Range_Size;
 
 public class DataTypes {
     public static void main(String[] args) {
-
         //strict data types:
 
         //1. primitive data types:

@@ -1,5 +1,8 @@
 package javasessions.Java_06_SwitchCase_UseCases_StringQuotesHandling_FinalKeyword_StaticArrayConcept;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class ArraysConcept {
 
     public static void main(String[] args) {
@@ -61,6 +64,8 @@ public class ArraysConcept {
         System.out.println(browsers[0]);
         System.out.println(browsers[2]);
         System.out.println(browsers[3]);
+        System.out.println("class type + hashcode"+browsers);
+        System.out.println("class type + hashcode"+ Arrays.toString(browsers));
 
     }
 

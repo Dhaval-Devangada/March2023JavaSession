@@ -39,6 +39,7 @@ public class ObjectExercises {
         System.out.println("-------------------------------------------------");
 
         obj1 = obj2;
+//        obj2=obj1;
 
         System.out.println(obj1.name + " " + obj1.marks + " " + obj1.grade); // Virat
         System.out.println(obj2.name + " " + obj2.marks + " " + obj2.grade); // Virat
@@ -48,6 +49,7 @@ public class ObjectExercises {
         System.out.println("-------------------------------------------------");
 
         obj2 = obj3;
+//        obj3=obj2;
 
         System.out.println(obj1.name + " " + obj1.marks + " " + obj1.grade); //Virat
         System.out.println(obj2.name + " " + obj2.marks + " " + obj2.grade); //Pandya
@@ -57,6 +59,7 @@ public class ObjectExercises {
         System.out.println("-------------------------------------------------");
 
         obj3 = obj4;
+//        obj4=obj3;
 
         System.out.println(obj1.name + " " + obj1.marks + " " + obj1.grade); //Virat
         System.out.println(obj2.name + " " + obj2.marks + " " + obj2.grade); //Pandya
@@ -66,6 +69,7 @@ public class ObjectExercises {
         System.out.println("-------------------------------------------------");
 
         obj4 = obj1;
+//        obj1=obj4;
 
         System.out.println(obj1.name + " " + obj1.marks + " " + obj1.grade); // Virat
         System.out.println(obj2.name + " " + obj2.marks + " " + obj2.grade); // Pandya
