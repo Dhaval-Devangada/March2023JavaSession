@@ -1,4 +1,4 @@
-package StaticConcept;
+package staticConcept;
 
 //Java_16_StaticVariables_Methods_PermGenration_MetaspaceMemory
 //Program - 5
