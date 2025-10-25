@@ -8,7 +8,7 @@ public class Employee {
     //All the animal are coming from ANIMAL category
     //All the laptops are coming from laptop category(each objects have diff property like here diff size and diff colours)
     // map of building (Class) and actual units we are building are objects
-    // From the blue print we are going to create n number of objects
+    // From the blueprint we are going to create n number of objects
 
     //So what is object,
     //Object: physical entity created from class(Category)
@@ -22,6 +22,7 @@ public class Employee {
     int age; //Every employee will have its own age
     double salary; //Every employee will have its own salary
     String city;//Every employee will have its own city
+    char g ;
 
     //We have created above variables under the class and not under the main method so those are called class variable
 
@@ -29,6 +30,7 @@ public class Employee {
     public static void main(String[] args) {
 
         int i = 10; // local variable because it is created inside the main method or method
+        int j;
 
         //create the object of the class: using new keyword
         Employee obj = new Employee();  // We need to write brackets other it will get error, We will see the importance of () in constructor.
@@ -67,7 +69,8 @@ public class Employee {
         System.out.println(obj1.name);
         System.out.println(obj1.age);
         System.out.println(obj1.salary);
-        System.out.println(obj1.city);
+        System.out.println("test" + obj1.city);
+        System.out.println("char=>" + obj1.g);
 
         // we can create n number of objects , there is no limit for that
         // To all the objects, class variables/global variables copies will be given to each and every objects

@@ -90,7 +90,7 @@ public class Customer {
     //main method is called by JVM
     public static void main(String[] args) {
         System.out.println("main method");
-        // We can access the class vars and methods directly / We can not access data members directly
+        // We can not access the class vars and methods directly / We can not access data members directly
         //To access it we have to create object of the class
         // create the object of the class:
         Customer c1 = new Customer();// Here photo copy of class vars and copy of methods will be given to new object
@@ -98,7 +98,6 @@ public class Customer {
         c1.age = 20;
 
         c1.test(); // this is calling a method (we are calling a method from another method)
-        c1.test();
 
         int m1 = c1.sum();
         System.out.println(m1 - 5 + 10);

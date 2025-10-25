@@ -3,7 +3,7 @@ package classandobjects;
 public class Student {
     //Every student will have some property
     //class vars/templates vars
-    //String name = "tom" // This is right practice because every student will have same name and which is TOM
+    //String name = "tom" // This is not right practice because every student will have same name and which is TOM
     // Let the object decide what will be the name of the student
 
     String name;
@@ -50,6 +50,9 @@ public class Student {
         //So if the student have 10 properties than you 10 times object will be created and that is horriable approach
         new Student().name = "Aman"; // New object got created
         new Student().marks = 80; // Another object got created
+        System.out.println("-----------------------");
+        System.out.println(new Student().name = "Aman"); //Just to check that what it will print
+        System.out.println("-----------------------");
 
 
         //just the ref name: then assigning with object (This ia another way of crating the object will use this approach in POM)
@@ -84,7 +87,7 @@ public class Student {
         //GC will destory only those objects which does not have any reference and the objects which are having null reference
         //Scope of GC is only and only to the HEAP and for STACK we have different destoring mechanism
 
-        System.gc(); // How to call GC using code/program
+       // System.gc(); // How to call GC using code/program
         //GC - de-allocation /Destroy the objects
 
         //What if there are so may objects and all the objects are properly referenced/created and heap size is getting increased? - So now the problem is our infrastructure/system
