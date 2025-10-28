@@ -48,7 +48,7 @@ public class Employee {
 
         //To access non-static variables we need to create the object
         Employee e = new Employee();
-        //how to access non static vars: using Object ref name
+        //how to access non-static vars: using Object ref name
         e.name = "Tom";
 
         //how to access static vars: We don't need to create object to access static variables
