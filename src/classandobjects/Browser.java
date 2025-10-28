@@ -41,6 +41,7 @@ public class Browser {
         }
 
         return devicesList;
+    //    return Apple Mouse,Apple Keyboard;
         //We can return the multiple values but we have to COLLECT it first by using COLLECTION or any DATA STRUCTURE
 
     }
@@ -50,7 +51,7 @@ public class Browser {
     public static void main(String[] args) {
 
         Browser obj = new Browser();
-        ArrayList<String> devList = obj.getEmployeeDevices("prashant"); //devList is holding parameter
+        ArrayList<String> devList= obj.getEmployeeDevices("prashant"); //devList is holding parameter
         System.out.println(devList);
 
         //We can use the returned value which is stored in(devList) for some other purpose. PLease check below

@@ -122,7 +122,7 @@ public class Person {
      *     We have 4 ways for search
      *     1 copy of all the above/below  methods/functions will be given to/stored inside the object( when we create it) and object is inside the heap
      *     What is the advantage of it? why are we overloading these methods?
-     *     Why can't we just write single "Search" method and write 1000 lines of code with so many switch cases and if..else conditions - than maintenance will be hard and won't be able to add/update the feature easily
+     *     Why can't we just write single "Search" method and write 1000 lines of code with so many switch cases and if..else conditions - then maintenance will be hard and won't be able to add/update the feature easily
      *     With overloading maintenance will be very easy
      *     We can add/update the feature very easily
      *     From user point of view advantage is: usability (user can know these are the diff veraites of search i can perform)
@@ -160,6 +160,8 @@ public class Person {
     public void doPayment(String cc, int cvv, int otp) {
 
     }
+    //gift card, qr code, cash
+
 
     // uber:
     // booking
@@ -191,8 +193,8 @@ What if we have same type as a parameter and just diff is PRIMITIVE and NON-PRIM
  */
     public Integer pop_c(Integer a) { //call/pass by ref  //Give me the reference of the class
         System.out.println("Integer type - bye");   //Integer a - is the reference of the object without creating object
-        return 100+a;                // this pop-c method says that you have to supply the value in the form of object only
-                                        //All the wrapper class are wrapped around primitive data types - It can handle the object and can handle normal value as well
+        return 100+a;               // this pop-c method says that you have to supply the value in the form of object only  // unboxing then boxing
+        //All the wrapper class are wrapped around primitive data types - It can handle the object and can handle normal value as well
     }
 
     public Integer pop_c(int a) { //call by value
@@ -219,7 +221,7 @@ What if we have same type as a parameter and just diff is PRIMITIVE and NON-PRIM
     When we call the below method
     popIt(20) then first method will be called
     popIt(253641236L) then second method will be code
-    We can select any method from the suggestion but execution it depends upon the argument we pass
+    We can select any method from the suggestion but execution depends upon the argument we pass
     If we pass "long" argument then 2nd method will be called and if we pass "int" argument then 1st method will be called
      */
     public int popIt(int a) {
@@ -276,8 +278,8 @@ Why it is compile time? -> Because before running the code, compiler is already 
 */
 
 //We can not overload each and every method
-//We need to check the feature -> Does feature have diff varieties
-//of all above methods => All the feature are pointing to the specific feature only.
+//We need to check the feature -> Does feature have diff varieties?
+//all above methods => All the feature are pointing to the specific feature only.
 //Diff varieties of login, payment, booking
 
 

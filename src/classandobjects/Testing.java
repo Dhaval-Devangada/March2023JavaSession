@@ -10,6 +10,7 @@ public class Testing {
     // return: true/false -- boolean (Browser is launched or not?)
     // (Input parameter) -- launchBrowser(browserName (string))
 
+    //Single return
     public boolean launchBrowser(String browserName) {
 
         //1 copy of this function will be given to/stored inside the object( when we create it) and object is inside the heap
@@ -68,12 +69,12 @@ public class Testing {
                 System.out.println("plz pass the right browser..." + browserName);
                 return false;
         }
-
+     //   System.out.println("hdhdh"); This will become unreachable
     }
     //"return" and "break" can not be together, because both are same and both will end the CASE
     // can we avoid the "break" in switch case - YES - we can use "return" instead
 
-    //Which approach is code ? 1st (single return) and 2nd (multiple return) - 1st because - Don't need to write multiple return
+    //Which approach is good ? 1st (single return) and 2nd (multiple return) - 1st because - Don't need to write multiple return
 
 
     public static void main(String[] args) { // This main method will be called by JVM
