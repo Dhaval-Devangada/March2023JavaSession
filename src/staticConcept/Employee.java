@@ -18,6 +18,9 @@ public class Employee {
     //We can apply static on method as well. Methods can be static in nature as well
     //Static methods will be stored in CMA as well
 
+   /* A static variable belongs to the class itself.
+            → All objects share the same copy.*/
+
     /**
      * Non-static method
      */

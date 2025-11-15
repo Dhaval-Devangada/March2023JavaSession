@@ -12,7 +12,7 @@ package MethodCallingConcept;
  *  So every time we call static method a new object will be created which will increase the heapSize
  *  There are two approach to access the non-static method from static
  *  1. create new object of non-static method in the static method and use the object ref to access non-static members-so in this case object will be created every time we call the static method. - Not a good approach
- *  2. If you have the reference available then you simply use it
+ *  2. If you have the reference available then you simply use it (ideal approach)
  *
  */
 
@@ -26,7 +26,7 @@ public class User {
         System.out.println("getting email");
         //sendEmail(); We can not call directly because it's part of the object
 
-        //1st approach  - Every time we can "getName()" a new object will be created which is not good from memory point of view
+        //1st approach  - Every time we call "sendEmail()" a new object will be created which is not good from memory point of view
 //        User u1 = new User();
 //        u1.sendEmail();
 
@@ -60,9 +60,11 @@ public class User {
 
 
     //Suppose for below method our requirement is to call m3() method which in "Employee" class. So we need to pass reference of that class
-    // below getName() is not responsible for creating the object otherwise every method need to create the object
+    // below getName() is not responsible for creating the object otherwise every object will get created whenever method is called
     // In below case main need to create the objet
     public static void getName(Employee e) {
+//        Employee employee = new Employee();
+//        employee.m3();
         e.m3();
     }
 
@@ -82,7 +84,11 @@ public class User {
 
         User u1 = new User();
         User.getEmail(u1); //call by ref  //Here we are giving/passing "u1" to "getEmail()"
+        User.readEmail(u1);
         u1.test(10);//value -- call by value //Here we are passing the value - Specific value we are passing
+        Employee employee = new Employee();
+        User.getName(employee);
+
 
 
         //If we are  not creating the object anywhere in this class/ in the main method

@@ -13,15 +13,15 @@ public class Employee {
     public void m1() {
         System.out.println("m1 method");
         m2();
-        //If i want to create m2() inside the m1(), do we need to create the object?
+        //If i want to call m2() inside the m1(), do we need to create the object?
         //Here both m1() and m2() are non-static
-        //Whenever you have to call non-static methods within the class then non need to create an object.
+        //Whenever you have to call non-static methods within the class then no need to create an object./ For another class we need to create object
         //visualize memory diagram
         //Real time example - Can I touch one hand with another hand? - YES
         //I can touch any of the property of my object - I can touch my hair,eyes,legs - we don't need to create one more/extra object for that
-        //I don;t need create another objects/create another 5 more "Dhaval" to call all the diff methods
-        //Once the object is created and they all are part of the same body here then m1() is calling m2() then we don;t need to create another object
-        //They all are available inside the same object. You can call them internelly without creating object
+        //I don't need to create another objects/create another 5 more "Dhaval" to call all the diff parts of the Dhaval
+        //Once the object is created and they all are part of the same body here then m1() is calling m2() then we don't need to create another object
+        //They all are available inside the same object. You can call them internally without creating object
     }
 
     public void m2() {
@@ -57,30 +57,35 @@ public class Employee {
         t3();
     }
 
+    /*
+    How to access non-static from static method.
+     */
     public static void t3() {
         System.out.println("t3 method");
        // what if static wants to call non-static?
        //Need to create object
-        Employee emp = new Employee();
+        Employee emp = new Employee(); //Within the method we have written the code to create the object
+        //How many times above object will get created? - Whenever user call above method
         emp.m1();
     }
     //What is problem with above method?
-    //Every time new object will be created when the above method is called.So heap size will get increased
+    //Every time new object will be created when the above method is called.So heap size will get increased.
     //So what should we do to overcome this problem?
     //we can create global object - There is not concept of global object - if we write "new Employee()" inside the method then whenever we call t3() then object will get created
     // To resolve this we have - call by reference
     //So before moving to the concept, we have to understand the problem statement first. What is a need of that?
-    //Here the problem is we are creating new object whenever we call t3() -> so think like what is the necessary/most important thing to call m1()?
+    //Here the problem is we are creating new object whenever we call t3()
+    // so think like what is the necessary/most important thing to call m1()?
     //someone is calling t3() then t3() has to call m1()
-    //What we need to call m1()(which is in object) from t3() (Which is in meta space) => The reference
+    //What we need,, to call m1()(which is in object) from t3() (Which is in meta space) => The reference
     //So why don't we communicate with "object reference" and use the "object reference" to call the methods of the object
     //so that is why concept known as "call the method by reference"
 
 
 
     public static void main(String[] args) {
-//Main method is available inside the CMS/Meta Space
-// So now from static method we want to call another non-static method. so we have to create object of this class
+//Main method is available inside the CMA/Meta Space
+//So now from static method we want to call another non-static method. so we have to create object of this class
 
         Employee e1 = new Employee();
         e1.m1();

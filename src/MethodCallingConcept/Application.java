@@ -50,7 +50,7 @@ public class Application {
 }
 
 /**
- * GC can not come inside the stack or CMS
+ * GC can not come inside the stack or CMA
  * Stack means - the execution stack
  * Executing the methods we need some space. So that we will have in stack at the run time/execution time.And that space is known as stack space
  * It will take care about the execution part
@@ -118,7 +118,7 @@ public class Application {
  * Global variables - if static then 1 copy will get stored in Meta space
  *                  - if no-static then 1 copy will be stored inside the object
  *
- * stackoverflow if an ERROR not an exception. It's memory issue in our program.
+ * stackoverflow is an ERROR not an exception. It's memory issue in our program.
  *
  * Where exactly we need more space? inside the heap or stack?
  * If we have 16GB RAM
@@ -128,7 +128,7 @@ public class Application {
  * main -> login(use,pass)->search(product name)-> add to cart -> payment (CC) --> order(id)
  * once the final method ORDER(id) is executed then entire stack will be destroyed/deallocated automatically/again back to zero
  * And for the heap we need to wait for the GC
- * so tack memory is lesser than the heap memory and less complex than the heap memory
+ * so stack memory is lesser than the heap memory and less complex than the heap memory
  *
  * To see visual diagram google - stack execution animation
  * So conclusion is that we need to write a code in such a way that we never get the stackoverFlow error

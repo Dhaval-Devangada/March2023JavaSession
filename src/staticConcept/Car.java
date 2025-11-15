@@ -15,7 +15,7 @@ public class Car {
     //final static int wheels_car_=; // This will give an error. Because we have made the value final but java don't know which value is final. So if we make the variable final then we need to define the value as well
     //Static is a class value - its always part of class - its always representing class value
     //Generally we use final for the universal truth -> footer, headers,logo, category, number of months, days in week
-
+  //  final static int j = 10;
     //static method - common for all
     //utils/generic functions
     public static void displayLogo() {  // logo is the common property for all the pages
@@ -28,7 +28,7 @@ public class Car {
 
 
     public static void main(String[] args) {
-
+    //    j=20;
         final int i = 10;//local var  // local variable can be final
     //   static int i = 10;//local var //Can we make local variable static in nature? NO
         // Static is a class value - its always part of class - its representing class value -Local variable can not be stored inside the meta space So local variable can not be static
@@ -47,10 +47,10 @@ public class Car {
         Car c3 = new Car();
         c3.name = "BMW  X7";
         c3.chasisNumber = "BMWVNM121212";
-      //  c1.wheels =4;
+   //     c1.wheels =4;
 
         ///Car.wheels = 5; // Some other developr is trying to change the wheels property because he is able to access it
-        /// Wheels can not be/ can never be 5 - So this is bug so to resolve it we need to make WHEELS property "final"
+        /// Wheels can not be/ can never be 5 - So this is bug so to resolve it, we need to make WHEELS property "final"
         /// The moment we make it final then no one can manipulate the value
         /// final means - constant value - value cannot be changed
         ///static and final both are different
@@ -61,7 +61,7 @@ public class Car {
     }
 }
 /**
- * 3 objects will be created and copies og all the 4 vars will be given to objects
+ * 3 objects will be created and copies of all the 4 vars will be given to objects
  * 100 objects are there than 100 copies of all the 4 var will be given to objects
  * But wheels vars has same value in all the objects which is 4
  * Wheels memory allocation = Which is taking 4 bytes *3 objects  = 12 bytes in the memory
