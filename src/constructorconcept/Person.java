@@ -34,7 +34,7 @@ public class Person {
         Person p1 = new Person("Naveen", "ABCD");
         Person p2 = new Person("Tom");
 
-        System.out.println(p2.collegeName); // Here for "Tom" we have not passed "ABCD" through we will get "ABCD" as colleage name for TOM. Because "Colleage" name is stored in CMA
+        System.out.println(p2.collegeName); // Here for "Tom" we have not passed "ABCD" through we will get "ABCD" as college name for TOM. Because "College" name is stored in CMA
 
         System.out.println(collegeName);
 
