@@ -1,6 +1,8 @@
 package OOP_Encapsulation;
 /*Java_19_OOP_Encapsulation_getter_setter_thisKeyword
-Program - 3*/
+Program - 3
+Refer program 2 parallely as well - We have created 2nd program to Test the features of this class
+*/
 public class LoginPage {
     //below variables are private in nature
     private String username;
@@ -14,11 +16,14 @@ public class LoginPage {
         return username;
     }
 
-    //setter can be user for checks as well/validation as well
-   //What if we are passing USER= null;
+    //setter can be use for checks as well/validation as well
+    //checks for USERNAME
+   //What if we are passing USERNAME= null;
    // username length should be up to 8 letters only
+
+    //checks for password
     //We can set the policy for the password
-    //So if we do checks/validation before supplying the data then our database is not get polluted with garbage data/junk values
+    //So if we do checks/validation before supplying the data then our database is not getting polluted with garbage data/junk values
     public void setPassword(String password) {
         if(password != null) {
             if(password.length()>=8) { //So these kind of checks we can do inside the setter block
@@ -38,4 +43,5 @@ public class LoginPage {
     public void doLogin() {
         System.out.println("login with : " + username +" : " + password); //We can use "username" and "password" here because both are in  the same object
     }
+
 }

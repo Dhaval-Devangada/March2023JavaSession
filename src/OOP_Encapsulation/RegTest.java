@@ -18,12 +18,12 @@ public class RegTest {
         System.out.println(reg.getCity());
         System.out.println(reg.isPerm());
 
-        // update the values: (updating the values using setters) //If we want the update functionality then we can user the setters otherwise we can ignore
+        // update the values: (updating the values using setters) //If we want the update functionality then  user can use the setters to update otherwise user can ignore
         // PUT (This is behaving like put call)
         reg.setCity("Bangalore");
         reg.setPhoneNumber(9876543212L);
 
-        System.out.println("--------");
+        System.out.println("----Updated the values of CITY and PHONE NUMBER----");
 
         // check my user profile once again to check the updated values
         // GET call (This is behaving like get call)
@@ -47,7 +47,7 @@ public class RegTest {
         System.out.println(reg1.getCity());
         System.out.println(reg1.isPerm());
 
-        //noe we are updating the other data
+        //now we are updating the other data
         // update: PUT
         reg1.setAge(30);
         reg1.setCity("Delhi");
@@ -66,7 +66,7 @@ public class RegTest {
         //
         Selenium.click();
 
-        //Hoe valued can be manipulated if the instance variable is private.
+        //How valued can be manipulated if the instance variable is private.
         reg.dob = "1-1-1990";
         reg.dob = "30-12-1996";
         System.out.println(reg.dob);//30-12-1996

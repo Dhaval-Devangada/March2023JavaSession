@@ -3,37 +3,39 @@ package OOP_Encapsulation;
 /*Java_19_OOP_Encapsulation_getter_setter_thisKeyword
 Program - 1*
 Refer program 2 parallely as well - We have created 2nd program to Test the features of this class
- */
+ 6*/
 
-//We will not write the main method for these classes. Refer below.
+//We will not write the main method for these classes. Refer below to understand why we should not write main method in the same program/module?
 //Suppose we have one application and in that application we have multiple classes
 //Login page class,search page class,home page class , registration page, add to cart ,payment page
 //So as a user we want to call methods and constructor of these classes
-//so where so we create the main method
+//so where we should create the main method
 //Should we create main method in all(Loginpage,homepage..) the classes to call the methods and constructors of those classes.
-//Or should create seprate class (runner class) and create the main method there.
-//And than main method of the runner class will be called by USER.
-// main method of the runner class is now responsible for creating objects of all other pages and call the respective constructor or the methods
-// User will not creater main method in all the 100 classses
+//Or should create separate class (runner class) and create the main method there.
+//And then main method of the runner class will be called by USER.
+//If we create main method in runner class then main method of the runner class is now responsible for creating objects of all other pages and call the respective constructor or the methods
+// User will not create main method in all the 100 classes
 //we will always create a runner class
-//You think from design point of view or application point of view. If i am going to call Amazone page. What we will do is, we will hit "amazone.com" and then we will get the "LoginPage".
-//It's not like that for every page we will hit the seprate URL/we will creating the main method.
-// We just need/want an interface where user can interacet. So main method is giving us the actual user interface for the user in the form of coding and then main method will start creating the objects and calling the methods
+//You think from design point of view or application point of view. If I am going to call Amazon page. What we will do is, we will hit "amazon.com" and then we will get the "LoginPage".
+//It's not like that for every page we will hit the separate URL/we will create the main method.
+// We just need/want an interface where user can interact. So main method is giving us the actual user interface for the user in the form of coding and then main method will start creating the objects and calling the methods
 
 
 //Encapsulation
 //encapsulation is important concept to hide the data member
-//so we are gonna talk about what do you mean by data hiding
+//so we are going to talk about what do you mean by data hiding
 //And how to encapsulate the data? and what is purpose of that? we should understand that
-//And can we acheive the encapsulation without the variable and only with the methods
+//And can we achieve the encapsulation without the variable and only with the methods
 //what is right practice to write the code and write the methods
-//tomorrow if we have huge system, then are we going to expose all the mehtods to the users? - NO
-//We will expose only important methods to the users. Not everthing we are going to expose to the user
+//tomorrow if we have huge system, then are we going to expose all the methods to the users? - NO
+//We will expose only important methods to the users. Not everything we are going to expose to the user
 //Because user is not bother about how internally code is working
-// User just want to see overall picture and give me some important things and thats it.
+// User just want to see overall picture and give me some important things and that's it.
 
 
-//We have class and we will divide it into two parts
+import java.security.PublicKey;
+
+//We have class, and we will divide it into two parts
 //now there are two section
 // 1. Public(Where public properties of the class are there 1.public variables and 2.public methods)
 // and 2. Private (Where the private properties of the class are there 1.private variables 2.private methods)
@@ -63,6 +65,7 @@ public class Employee {
     private int age;
     private double salary;
     private int amount;//110, 15
+    private int i;
 
 
     // we need to create public getter and setter methods:
@@ -75,7 +78,7 @@ public class Employee {
     //We are creating public method "setName" using which we can define the values of private variables.
     public void setName(String name) { // "name" is local variable because it is defined inside the method
         this.name = name;  // this.gloabl = local
-        // Whenever we want to supply local variable to global variable, dosen't matter we are using in the constructor/method. We will always go with the this keyword
+        // Whenever we want to supply local variable to global variable, doesn't matter we are using in the constructor/method. We will always go with the this keyword
         // So here we have initialized the name or set the value of name, so now can we access the "name" in the other class directly? - No
         // Because "setName" method is just setting the value of local variable to global variable.
         // That dosen't change the access modifier from private to public.
@@ -114,7 +117,7 @@ public class Employee {
 
 
     //Is it really mendetory to create getter and setter?
-   // supppose for "amount" we are not creating any setter and just creating only getter. Is it possible?,  just give me the amount
+   // suppose for "amount" we are not creating any setter and just creating only getter. Is it possible?,  just give me the amount
     public int getAmount_1() {
         calculateShareAmount_1();
         return amount;//110, 15
@@ -125,7 +128,7 @@ public class Employee {
     //so getter and setter not mendetory
     //Below method is also private so user can not access it as well
     //User has no idea that how "shareAmount" is getting calculated.
-    //so when we combine "1.private int amount", "calculateShareAmount()" and "getAmount()" - This we can consider as encapsulation
+    //so when we combine "1.private int amount", "private calculateShareAmount()" and "public getAmount()" - This we can consider as encapsulation
     //We are hiding the class properties(variables/methods)
     //Both variables and methods can be hidden with the help of private. We can give the access with the public layer
     private void calculateShareAmount_1() {
@@ -150,9 +153,9 @@ public class Employee {
 //No direct access to private variables but we are giving indirect access via public
 //Why are we not giving direct access to private variables?
 // It is possible we can have some critical variables.
-// SO if we set the critical variable as private then it can give us data security, and we are not giving the direct access.
+// So if we set the critical variable as private then it can give us data security, and we are not giving the direct access.
 // Otherwise, anyone can manipulate the critical data members(variable/method) like name , age and salary
 //If we really want to change/ update the value of specific variable then It will only be set via "setter" and value will get set only for that particular object and not for all the objects
 // Its totally up to you that if you want to give access to private variables/methods via public layers (You set it and you get it)
-//If we are setting the values of 1 private member using one object (e1.name="Dhaval") then it want impact the value of other object(e2.name="Vijay"/null which is default).Because both are seprate object (Refer EMPTEST.JAVA and e2 object )
+//If we are setting the values of 1 private member using one object (e1.name="Dhaval") then it won't impact the value of other object(e2.name="Vijay"/null which is default).Because both are seprate object (Refer EMPTEST.JAVA and e2 object )
 //if we have everything public in nature then we don't need getter and setters then your system is not secure and anyone can access you properties and manipulate it

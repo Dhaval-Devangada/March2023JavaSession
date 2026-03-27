@@ -10,7 +10,7 @@ public class Selenium {
 
     //constructor is private so we need to create static method
     public static void click() {
-
+        System.out.println();
     }
 
 }

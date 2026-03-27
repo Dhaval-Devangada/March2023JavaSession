@@ -26,19 +26,19 @@ public class Register {
     }
     //All of our private variables got initialize when we wrote above line and we will be able to access it with the getters
     //So if we have the constructor then we can avoid setters because "constructor" is behaving like setters for me
-    //in the setter we were supplying the data which were setting the global variables
+    //in the setter we were supplying the data which  were setting the global variables
     // in the setter we wre using "this.global=local" and in the constructor we are also using "this.global=local" and both are setting the global variables
     //so it is not mendetory to write setters - No , because we can use constructor
     //But getter is important - Because if there is no getter then we can not fetch the value
-    //But if we have use constructor for setting up the value and also we are using the setter then what the use/importance of writing setter through we have used constructor
+    //But if we have use constructor for setting up the value and also we are using the setter then what the use/importance of writing setter though we have used constructor
     // To update the value we can use setters
     //so for the first time to set the value - we are using constructor
     //Then to update the value - we are using setters
-    //If we want to prevent the value from updating then we don't to implement setters. So in that case once the value is initialize then it's done/set/finalize. We can not change it.
+    //If we want to prevent the value from updating then we don't need to implement setters. So in that case once the value is initialize then it's done/set/finalize. We can not change it.
     //So in that case we create "Registration" class without setters
-    //User can create the users and get the information but user can not set the values because there is no update functionality.Once the values are done it's done. YOu can not edit or change it.
-    //If we combine our private instance variable with public constructor then is it encapsulation? - YES it is - Because we can still set the values using CONSTRUCTORS. Constructor is behaving like setter for me.
-    //So encapsulation is just not about getter and setter. It's about that you are binding the private variables with help of public properties and those properties can be constructor also and can be methods as well
+    //User can create the users and get the information but user can not update the values because there is no update functionality.Once the values are done it's done. YOu can not edit or change it.
+    //If we combine our private instance variable with public constructor then is it encapsulation? - YES it is - Because we can still set the values using CONSTRUCTORS. Constructor is behaving like setter for me and also it's public.
+    //So encapsulation is just not about getter and setter. It's about that you are binding the private variables with help of public/protected properties and those properties can be constructor or methods as well
     //If we combine our private instance variable with public methods(getters and setters) then that is also encapsulation
     //encapsulation means both public & private should be there
 
@@ -90,6 +90,13 @@ public class Register {
         this.isPerm = isPerm;
     }
 
+    public void createUser(){
+        //Business logic
+        System.out.println("First name: " + name);//global
+        System.out.println("age name: " + age);
+        System.out.println("User is successfully registered");
+    }
+
 }
 //Please refer screenshot 4
 //We have Browser class
@@ -106,8 +113,8 @@ public class Register {
 //Please refer screenshot 5
 //Selenium example - which method we use to click on the element?
 //.click()
-//We have selenium 4.0 library inside which wwe have .click()
-//and from testng class we are calling .click() of selenium
+//We have selenium 4.0 library inside which we have .click()
+//and from testing class we are calling .click() of selenium
 //.click() is publicly available
 //But to click on the element selenium has to do a lot of operations internally
 //check the DOM structure -> check the element is available or not->check on which browser
