@@ -19,7 +19,7 @@ public class ArraysConcept {
 
         //int array:
         int k[] = new int[4];// We need to tell in advance that how many segment do you really want to take in the memory
-        // new keyword say I really want to allocate 4 segments inside the memory so give me new memory inside the memory
+        // new keyword says that I really want to allocate 4 segments inside the memory so give me new memory inside the memory
         // Total bytes taken 4 bytes * 4 = 16 bytes
         //li = 0
         //highest index = length(4)-1= 3

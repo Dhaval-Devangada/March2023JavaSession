@@ -16,9 +16,11 @@ public class ArrayTravesing {
         //so don't print the array directly
 
         // This will give AIOB error, because we have index up to 3
-        for (int i = 0; i <= k.length; i++) {
+        int p = k.length;
+        System.out.println("K's length "+ p);
+    /*    for (int i = 0; i <= k.length; i++) {
             System.out.println(k[i]);
-        }
+        }*/
 
         //1st correct approach
         for (int i = 0; i <= k.length - 1; i++) {

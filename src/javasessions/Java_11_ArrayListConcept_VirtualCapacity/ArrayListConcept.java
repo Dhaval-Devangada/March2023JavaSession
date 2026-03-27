@@ -38,8 +38,8 @@ public class ArrayListConcept {
 
         System.out.println(ar.get(0));
         System.out.println(ar.get(8));
-        //System.out.println(ar.get(-1));//IOB
-        //System.out.println(ar.get(9));//IOB
+     //   System.out.println(ar.get(-1));//IOB
+        System.out.println(ar.get(9));
 
         ar.add(1100);
 
