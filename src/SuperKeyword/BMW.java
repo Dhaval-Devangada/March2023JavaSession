@@ -2,19 +2,23 @@ package SuperKeyword;
 
 public class BMW extends Car{
 
-   // int min_speed = 200;
+    int min_speed = 200;
     //There is no concept like variable overriding
     // Car class is having it's own variable and "BMW" class is having it's own variable
     //Method will be overridden not the variables
 
     public void displaySpeed(){
-        System.out.println(min_speed);
+
+        //How to use SUPER with variable?
+
+        System.out.println("BMW display speed Method");
+        System.out.println("BMW min speed:" + min_speed);
         //min_speed and "displaySpeed" both are part of the same object so they can call each other.
         //value - 200
         //Suppose we are doing some calculation and we really want super class variable as well but without creating the object of "Car" class
         //Straight forward way is , Create the Car class object and do c.min_speed
-        //We can use "Super" key as well. "Super" means, we can Super class property
-        System.out.println(super.min_speed);//100
+        //We can use "Super" key as well. "Super" means, we can use Super class property
+        System.out.println("Car min speed:" + super.min_speed);//100
 
     }
 
@@ -34,10 +38,11 @@ public class BMW extends Car{
         super(); //We are calling default constructor.
         //super(20);
         System.out.println("BMW-Constructor");
-        //super(); //We can not write "super()" constructor call in between/at last in the code. Constructor call must be the first statement in a constructor
+        //super();
+        // We can not write "super()" constructor call in between/at last in the code. Constructor call must be the first statement in a constructor
         //It's not mendetory that from default const we can call only default cons, we can call parameterize const as well
         //To check above scenario - uncomment parameterize const (super(20)) and comment out (default const)
-        //Can we call both parent class const - NO -Why? because for that we need to write SUPER times and we can't write SUPER in second line
+        //Can we call both parent class const - NO -Why? because for that we need to write SUPER two times and we can't write SUPER in second line
         //SUPER should always be the first statement
         //this should always be the first statement in the const
         //So we can not SUPER and THIS together as well because any one of them needs to come in second line
@@ -75,7 +80,7 @@ public class BMW extends Car{
  * I can access all my parent properties without creating the object with the help of SUPER keyword
  *
  * So are we creating parent class object unnecessarily - no
- * If we don't have SUPER keyword then what we should we do to access the CAR class property - To access the property of CAR class we need to create Object of CAR class unnecessarily
+ * If we don't have SUPER keyword then what we should do to access the CAR class property - To access the property of CAR class we need to create Object of CAR class unnecessarily
  * So why to create extra object. So batter use SUPER keyword
  *
  * 3 use cases of super keyword

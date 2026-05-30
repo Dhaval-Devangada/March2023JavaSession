@@ -12,6 +12,6 @@ public class Car extends Vehicle{
         System.out.println("CAR-default Constructor");
     }
     public Car(int i ){
-        System.out.println("CAR Constructor..."+ i);
+        System.out.println("CAR class parameterized Constructor..."+ i);
     }
 }
